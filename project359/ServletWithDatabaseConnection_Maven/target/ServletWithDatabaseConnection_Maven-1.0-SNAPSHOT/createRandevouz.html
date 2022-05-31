@@ -1,0 +1,15 @@
+<div id ='createRand'>
+    <!--<div id = 'createRandTitle' style="background-color: #0d8386; color:white; padding:1%;">-->
+        <h4>Create Randevouz</h4>
+    <!--</div>-->
+    <form id="myForm" name="myForm" onsubmit='addRandevouz();return false;'>
+        <label for="randDate" style="margin:1%; margin-left:0px; ">Date:</label>
+        <input id = "newRandDate" type="date" required>
+        <br>
+        <label for="randTime" style="margin:1%; margin-left:0px;margin-top:0px;">Time:</label>
+        <input id = "newRandTime" type="time" min="08:00" max="20:30" required >
+        <br>
+        <textarea class="form-control" id="newRandInfo" name="message" rows="4" placeholder="Extra Information"></textarea>      
+        <input class="btn" type="submit" value="Add" style="background-color: #0d8386; color:white; margin-top:1%; margin-left:91.5%;"/>
+    </form>
+</div>

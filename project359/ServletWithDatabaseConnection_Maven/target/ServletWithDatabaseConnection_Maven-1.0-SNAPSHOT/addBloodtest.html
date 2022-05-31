@@ -1,0 +1,35 @@
+
+<div class ="row mb-3 mt-4">
+    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+
+    <div class = "col-sm-10 col-md-10 col-lg-10 col-xl-10">
+        <div class ="row">            
+            <div class ="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <label class = "addblLabel justify-content-end" for='test_date'>Test Date:</label><br>
+                <label class = "addblLabel justify-content-end" for='medical_center'>Medical Center:</label><br>
+                <label class = "addblLabel justify-content-end"  for='vitamin_d3'>Vitamin d3:</label><br>
+                <label class = "addblLabel justify-content-end"  for='vitamin_b12'>Vitamin b12:</label><br>
+                <label class = "addblLabel justify-content-end"  for='cholesterol'>Cholesterol:</label><br>
+                <label class = "addblLabel justify-content-end"  for='blood_sugar'>Blood Sugar:</label><br>
+                <label class = "addblLabel justify-content-end"  for='iron'>Iron:</label><br>
+            </div>
+            <div class ="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <form id="myForm" name="myForm" onsubmit='addBloodtest();return false;'>
+
+                    <input class = "addblInput" id='test_date' type="date" name='test_date' required><br>
+                    <input class = "addblInput"  id='medical_center' type="text" name='medical_center' required><br>
+                    <input class = "addblInput"  id='vitamin_d3' type="number" step="0.01" name='vitamin_d3'><br>
+                    <input class = "addblInput"  id='vitamin_b12' type="number" step="0.01" name='vitamin_b12'><br>
+                    <input class = "addblInput"  id='cholesterol' type="number" step="0.01" name='cholesterol'><br>
+                    <input class = "addblInput"  id='blood_sugar' type="number" step="0.01" name='blood_sugar'><br>
+                    <input class = "addblInput"  id='iron' type="number" step="0.01" name='iron'><br>
+                    <input class = "addblInput"  id='amka' type='text' name='amka' value="tmp" style="display:none"><br>  
+                    <!--<input type='submit' class="button" value="Add Bloodtest">  Press this to submit form -->
+                    <button class="btn btn-small" type="submit" style="background-color: #0d8386; color:white; width:189px;">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+</div>

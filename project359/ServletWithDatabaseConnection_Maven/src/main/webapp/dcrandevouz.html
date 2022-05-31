@@ -1,0 +1,41 @@
+<div id = "main">
+
+    <div id="calendar">
+        <div class="month">
+            <div class="last" onclick="changeMonth('last')">
+                <span>&#10094;</span>
+            </div>
+            <h2 id="month"></h2>
+            <div class="next" onclick="changeMonth('next')">
+                <span>&#10095;</span>
+            </div>
+        </div>
+        <div class="weekdays">
+            <div>Sunday</div>
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+            <div>Saturday</div>
+
+        </div>
+        <div class="days"></div>
+    </div>
+
+    <div id = "randevouz">
+
+    </div>
+
+    <div class ="row mb-3 mt-3">
+       
+        <div class ="col-sm-4 col-md-4 col-lg-4 col-xl-4 "></div>
+        <div class ="col-sm-1 col-md-1 col-lg-1 col-xl-1 "><div id ="pdfButton"></div></div>
+        <div class ="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+            <button class ="btn btn-small addBtn" type="button" onclick ="loadCreateRand()">New</button>
+        </div>
+    </div>
+    
+</div>
+
+

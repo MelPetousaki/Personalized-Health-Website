@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>csd3798 and csd3827</title>
+        <meta name="Author" content="Vasilis Mavrogeorgis csd3798 and Melina Petousaki csd3827">
+        <meta name="Description" content="An example sign up site">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/formCode.js"></script>
+        <link rel="stylesheet" href="css/cssExamples.css">
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+            <div class="container-fluid" id="navLinks">
+                <a class="navbar-brand" id ="navHome" href="#">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="navFindDocs" onclick ="callVisFindDocs()" href="#find_docs">Find Doctors</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Top</a>
+                        </li>
+
+                    </ul>
+
+                    <div class = "collapse navbar-collapse justify-content-end">	
+                        <ul class="navbar-nav">		
+                            <li class="nav-item">			
+                                <a class="btn btn-small navbar-btn ms-3"
+                                   id = "navLogin" href = "#login" style="color:white;">Login</a>
+                            </li>
+
+                            <li class="nav-item">			
+                                <a class="btn btn-small navbar-btn ms-3" id="navSign" href = "#register" 
+                                   style="background-color: #0d8386; color:white;">Sign up</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+        <div id = "homepage"> 
+            <div class="row mb-3 mt-3">
+                <div class="container">
+                    <img class = "cov_bg" src="img/covid.png" alt="Virus"  height="650">
+                    <div class = "ontoptxt">
+                        <h2>Covid-19</h2>
+                        <p>How to protect yourself and others</p>
+                        <a href = "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" target="_blank" 
+                           style = "text-decoration: underline; color: inherit; ">Learn more</a>
+
+                        <br><br><br>
+
+                        <h2>Hospitals</h2>
+                        <p>All public hospitals in Herakleion </p>
+                        <a href = "https://www.venizeleio.gr/" target="_blank" 
+                           style = "text-decoration: underline; color: inherit; margin-right:10%;"
+                           >Venizeleio</a>                            
+                        <a href = "https://www.pagni.gr/" target="_blank"
+                           style = "text-decoration: underline; color: inherit;"
+                           >Pagni</a>
+
+                        <br><br><br>
+
+                        <h2>First Aid</h2>
+                        <p>Administering first aid</p>
+                        <a href = "https://www.ekab.gr/files/entypa/EKAB-protes-voithies.pdf" target="_blank"
+                           style = "text-decoration: underline; color: inherit;"
+                           >Learn now</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id ="mainPart" >
+            <div id="notLoggedInKey"></div>
+            <!--<div class="mb-3 mt-3"> 
+                <button type="button" class="btn btn-success" onclick="Switch_to_login()">Already have an Account?</button>
+                <button type="button" class="btn btn-success" onclick="Switch_to_sign_up()">Create an Account</button>
+            </div>-->           
+
+        </div>   
+        <div id = "footerPart" class="mt-auto">
+            <footer class="text-center text-lg-start sticky-bottom" style="background-color: #212529; color:#97999b;">
+                <div class = "row">
+                    <div class = "col-md-3 col-lg-3 col-xl-3 mb-3 mt-3">
+                        <div id = "pharmacies" style = "margin-left:  5%;">
+                            <h6>On Duty Pharmacies</h6>
+                            <a href="https://www.vrisko.gr/efimeries-farmakeion/irakleio" 
+                               target="_blank">
+                                <img src=
+                                     "https://www.vrisko.gr/graphlink/Pharmacies/image/300x60_Banner_n/?Region=irakleio&NativeRegion=%ce%97%cf%81%ce%ac%ce%ba%ce%bb%ce%b5%ce%b9%ce%bf&"
+                                     border="0" alt="On Duty Pharmacies" 
+                                     /> 
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class = "col-md-3 col-lg-3 col-xl-3 mb-3 mt-3">
+                        <div id = "hospitals" style = "margin-left:  5%;">
+                            <h6>On Duty Hospitals</h6>
+                            <a href="https://www.vrisko.gr/efimeries-nosokomeion?SelectedCity=hrakleio" target="_blank">
+                                <img src=
+                                     "https://www.vrisko.gr/graphlink/Hospitals/image/300x60_Banner_n/?Prefecture=hrakleio&NativePrefecture=%ce%97%ce%a1%ce%91%ce%9a%ce%9b%ce%95%ce%99%ce%9f&" 
+                                     border="0" alt="On Duty Hospitals" /></a>
+                        </div>
+                    </div>
+
+                    <div class = "col-md-3 col-lg-3 col-xl-3 mb-3 mt-3">
+                        <div id = "covid_info" style = "margin-left:  5%;">
+                            <h6>Covid-19 Information</h6>
+                            <a href = "https://covid19.gov.gr/" target="_blank"
+                               style = "text-decoration: none; color: inherit;"
+                               >Greek Government Guidelines</a>
+                            <br>
+                            <a href = "https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank"
+                               style = "text-decoration: none; color: inherit;"
+                               >International Guidelines</a>
+                        </div>
+                    </div>
+
+                    <div class = "col-md-3 col-lg-3 col-xl-3 mb-3 mt-3">
+                        <div id = "socials" style = "margin-left:  5%;">
+                            <h6>Social Media</h6>
+                            <!-- Facebook -->
+
+                            <a href="https://www.facebook.com" target= "_blank">
+                                <img src="img/facebook.png" alt="Facebook link" style="width:42px; height:42px; text-decoration:none;">
+                            </a>
+
+                            <!-- Twitter -->
+                            <a href="https://www.twitter.com" target= "_blank">
+                                <img src="img/twitter.png" alt="Twitter link" style="width:42px; height:42px; text-decoration:none;">
+                            </a>
+
+                            <!-- Google -->
+                            <a href="https://www.google.com" target= "_blank">
+                                <img src="img/google.png" alt="Google link" style="width:42px; height:42px; text-decoration:none;">
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com" target= "_blank">
+                                <img src="img/instagram.png" alt="Instagram link" style="width:42px; height:42px; text-decoration:none;">
+                            </a>
+
+                            <!-- Linkedin -->
+                            <a href="https://www.linkedin.com" target= "_blank">
+                                <img src="img/linkedin.png" alt="Linkedin link" style="width:42px; height:42px;
+                                     background-color:white; background-clip: content-box; text-decoration:none;">
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </footer>
+        </div>
+
+    </body>
+</html>

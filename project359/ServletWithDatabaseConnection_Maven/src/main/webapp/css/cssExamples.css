@@ -1,0 +1,506 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+    min-height: 100%;
+    
+}
+
+table, tr{
+    border: 2px solid black;
+    
+}
+.row {
+    width:100%;
+ 
+}
+
+#loginUI{
+    padding-bottom:7%;
+    padding-left:9%;
+    padding-right:9%;
+    padding-top:5%;
+    border-style: solid; 
+    border-width: thin; 
+    border-radius: 5px;
+}
+
+.loginBtn{
+    width:100%;
+    margin-top:3%;
+    background-color: #0d8386;
+    color:white;
+}
+
+mark{
+    background-color: #f0f0f0;
+}
+
+img {
+    width:90%;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  display:inline-block;
+  float: left;
+  padding: 10px;
+ /* 	text-align: center;*/
+  border: 5px solid black;
+  border-radius: 8px;
+  margin-right:2%;
+  margin-left:2%;
+  min-height:400px;
+}
+
+.column1Width {
+width: 30%;
+}
+
+.column3Width {
+width: 99%;
+}
+
+.column2Width {
+width: 60%;
+}
+
+.subColumn {
+float: left;
+  width: 45%;
+  padding: 10px;
+  border: 5px solid black;
+  border-radius: 8px;
+  margin-right:10px;
+  margin-left:10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  
+}
+
+.cov_bg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+}
+
+.ontoptxt{
+  color:white;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  text-align: left;
+  
+}
+
+h2{
+    font-weight: semi-bold;
+    /*text-align: center;*/
+    text-align : inherit;
+}
+
+.button {
+  background-color: #ffffff; 
+  border: 5px solid black;
+  border-radius: 8px;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.doc_buttons{
+    border-style: solid; 
+    border-width: thin; 
+    border-radius: 5px; 
+    padding: 5%;
+    /*padding-right:10%;*/
+    padding-top:4%; 
+    margin-bottom:5%;
+    margin-left:5%;
+    margin-right:5%;
+    position:relative; 
+    overflow:hidden;
+}
+
+.btn.btn-warning.docmap{
+    position:absolute; 
+    right:1%; 
+    bottom:5%;
+}
+
+#BMI,#Ideal_weight{
+    text-align: left;
+    border-style: solid; 
+    border-width: thin; 
+    border-radius: 5px; 
+    padding: 5%;
+    
+}
+
+#BMIresult,#Idealresult{
+    font-weight:bold;
+    display:inline;
+    margin-left:7%;
+}
+
+.addblLabel{    
+    text-align:right;
+    font-weight: bold;
+    margin-top:0.5%;
+    margin-bottom: 5%;
+}
+
+.addblInput{
+    margin-bottom: 5px;
+} 
+
+
+#drpcheckbox{
+    background-color: #0d8386;
+    color:white;
+}
+
+#triggerVisual{
+    margin:1%;
+    width:50%;
+    border-style:solid;
+    border-width: thin; 
+    border-radius: 5px; 
+    padding:1%;
+    position:relative; 
+    overflow:hidden;
+}
+
+.checkbox{
+    padding-left: 5%;    
+}
+
+#bltable,#treattable{
+    border-style:none;
+    border-collapse:collapse;
+    background-color: #e4f4f5;  
+    width:100%;
+    text-align:center;
+}
+
+#bltable th,#treattable th{
+    padding:5px;
+    background-color: #0d8386;     
+    color:white;    
+    font-weight:normal;
+}
+
+#bltable tr,#treattable tr{
+    border-color: white;    
+}
+
+#msgtable{
+    border-collapse:collapse;
+    border:none;
+    width:100%;
+    text-align:center;
+}
+
+#msgtable th{
+    padding:5px;
+    border-collapse:collapse;
+    border:none;
+    background-color:#ffc20d;
+    color:black;
+    font-weight:normal;
+    padding:0.75%;
+}
+
+#msgtable tr{
+    border:none;
+    border-bottom-style: solid;
+    border-width: thin; 
+}
+
+#msgtable td{
+    padding:1%;
+}
+
+
+#calendar {
+    margin-left: 5.1%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    /*margin-bottom:0px;*/
+    width: 40%;
+    float:left;
+    box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.2);
+}
+
+.month{
+    background-color: #0d8386;
+    color : white;
+    text-align: center;
+    position: relative;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.last{
+    position: absolute;
+    justify-content: center;
+    width: 5%;
+    height: 10%;
+    font-size: 23px;
+    top: 35%;
+    left: 5%;
+}
+
+.next{
+    position: absolute;
+    justify-content: center;
+    width: 5%;
+    height: 10%;
+    font-size: 23px;
+    top: 35%;
+    right: 5%;
+}
+
+.last:hover,.next:hover{
+    cursor: pointer;
+} 
+
+
+.weekdays{
+    background-color: #3d9b9e;
+    color: white;
+    font-weight: bold;
+    padding: 2% ;
+    display: flex;
+}
+
+.weekdays div{
+    text-align: center;
+    /*margin-left: 4%;*/
+    /*margin-left: 26px;*/
+    width: 14%;
+}
+
+
+.days{
+    margin-left: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: normal;
+}
+
+.days div{
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 13.85%;
+
+}
+
+.days div:hover, .today:hover {
+    cursor: pointer;
+    background-color: #0d8386;
+    color: white;
+}
+
+.prev_days{
+    color: #b0b0b0;
+}
+
+
+.today{
+    cursor: pointer;
+    background-color: #3D9B9E;
+    color: white;
+	
+}
+
+#randevouz{
+        
+    margin-left:50%;
+    margin-right:5%;
+    overflow: hidden;
+    /*padding: 5%;*/
+    padding:2.6%;
+}
+
+.docRandevouz{
+    
+    margin:1%;
+    padding:2%;
+    border-style : solid;
+    border-width:thin;
+    border-radius: 5px; 
+    position:relative;
+    
+    
+}
+
+ .doneBtn{
+    background-color: #0d8386; 
+    color:white; 
+    /*margin-left:35.5%;*/
+    position:absolute;
+    right:13%; 
+    bottom:5%;
+}
+
+ .cancelBtn{
+    background-color: #f05a5a; 
+    color:white;
+    position:absolute;
+    right:1%; 
+    bottom:5%;
+}
+
+.addBtn{
+    /*width:5%;*/
+    margin-top:0px;
+    /*margin-left:39.8%;*/
+    
+    background-color: #0d8386; 
+    color:white;
+    margin-left:0px;
+}
+
+#pdfBtn{
+    /*width:8%;*/
+    margin-top:0px;
+    
+    /*margin-left:30%;*/
+    background-color: #0d8386; 
+    color:white; 
+}
+
+#createRand{
+    margin-top:1%;
+    padding:2%;
+    border-style : solid;
+    border-width:thin;
+    border-radius: 5px; 
+}
+
+.userID_pat{
+    margin:3%;
+    margin-left:6%;
+    padding:2%;
+    border-style : solid;
+    border-width:thin;
+    border-radius: 5px; 
+    position:relative;
+}
+
+
+.treatBtn{
+    background-color: #0d8386; 
+    color:white; 
+    position:absolute;
+    right:3%;
+    top:32%;
+    
+}
+
+.msgBtn{
+    position:absolute;
+    right:10%;
+    margin-right:3%;
+    top:32%;   
+    
+}
+
+#docSendmsg{
+    background-color: #0d8386; 
+    color:white;
+    position:absolute;
+    margin-top:1%;
+    top: 67%;
+    margin-left:77.6%;
+}
+
+#docDiscardmsg{
+    background-color: #f05a5a; 
+    color:white; 
+    position:absolute;
+    margin-top:1%;
+    top: 67%;
+    margin-left:83%;
+    
+}
+
+#patientsBackLink{
+    text-decoration: none;
+    color:black;
+    margin-left:26%;
+    font-size:20px;
+    margin-bottom:0px;
+}
+
+.pendingUserRands{
+    padding:2%;
+    padding-left:3%;
+    border-style : solid;
+    border-width:thin;
+    border-radius: 5px; 
+    position:relative;
+}
+
+.cancelBtnUser{
+    width:7%;
+    background-color: #f05a5a; 
+    color:white;
+    position:absolute;
+    right : 4%;
+    bottom:5%;
+}
+
+/*#uncertifiedDocs{
+    padding:2%;
+    border-style : solid;
+    border-width:thin;
+    border-radius: 5px; 
+}*/
+
+.adminBoxes{
+    margin:1%;
+    padding:2%;
+    border-style : solid;
+    border-width:thin;
+    border-radius: 5px; 
+    position:relative;
+}
+
+.adminDelBtn{
+    background-color: #f05a5a; 
+    color:white;
+    
+}
+
+.adminCertBtn{
+    background-color: #0d8386; 
+    color:white;
+    margin-right:1%;
+    
+    
+}

@@ -1,0 +1,20 @@
+<html>
+        <div class = "row mb-3 mt-3">
+            <div class ="col-sm-4 col-md-4 col-lg-4 col-xl-4"></div>
+            <div class ="col-sm-4 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-center" style="margin:auto;">
+                <div id="notLoggedInKey"></div>
+                <div id ="loginUI">
+                    <h3 style = "text-align:center;">Login</h3>
+                    <hr>
+                    <form id="loginForm" name="loginForm" onsubmit='loginPOST();return false;'>
+                        <label for="username" style="margin-bottom:3%;">Username:</label><br>
+                        <input type="text"  id="username" name="username" required  style="margin-bottom:3%;"><br>
+                        <label for="password" style="margin-bottom:3%;" >Password:</label><br>
+                        <input type="password"  name="password" id="password" required style="margin-bottom:3%;"><br>
+                        <input class ="btn btn-small loginBtn" type="submit"  value="Login">
+                    </form>    
+                </div>
+            </div>
+            <div class ="col-sm-4 col-md-4 col-lg-4 col-xl-4"></div>
+        </div>
+</html>

@@ -1,0 +1,13 @@
+<div id ='createTreat'>
+    <h4>Submit Treatment</h4>
+    <form id="TreatmentsForm" name="TreatmentsForm" onsubmit='addNewTreatment();return false;'>
+        <label for="treatStartDate" >Starting Date:</label>
+        <input id = "newStartDate" type="date" style="margin-bottom:1%;margin-right:1%;" required>
+        <label for="treatEndDate">End Date:</label>
+        <input id = "newEndDate" type="date" required>
+        <br>
+        
+        <textarea class="form-control" id="newTreatInfo" name="message" rows="5" placeholder="Treatment Information" required ></textarea>      
+        <input class="btn" type="submit" value="Submit" style="background-color: #0d8386; color:white; margin-top:1%; margin-left:94.5%;"/>
+    </form>
+</div>

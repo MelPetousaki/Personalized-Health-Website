@@ -1,0 +1,62 @@
+<div class='row' >
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-3 mb-3 " id ='goBacktoPatients'></div>
+</div>
+
+<div class='row' >
+    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+    <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10" id = 'patientName'></div>
+    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+</div>
+
+<div class = "row mb-3 mt-3">
+    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+
+    <div class = "col-sm-10 col-md-10 col-lg-10 col-xl-10">
+        <div id="filters">
+            <form id ="myForm" name="myForm" onsubmit='seeBloodtest(1); seeTreatments(1,"treatments");return false;'>
+                <input type="date" id="fromdate" required name="fromdate">
+                <input type="date" id="todate" required name="todate">        
+                <input class="btn btn-small" type="submit" value="Submit" style="background-color: #0d8386; color:white;">  
+            </form>
+        </div>
+        
+        <button class="btn btn-small" id="AllExams" type="button" onclick ="seeBloodtest(0); seeTreatments(0,'treatments');" 
+                style="background-color: #0d8386; color:white;">All Exams</button>
+
+        <button class="btn btn-small" type="button" onclick ="biomarkersDisplay();" 
+                style="background-color: #0d8386; color:white;">Visualization</button>
+
+        <div id ="triggerVisual" style="display:none;">
+            
+            <label><input id="vtmD3" type="checkbox"> Vitamin D3</label> &ensp;
+
+            <label><input id="vtmB12" type="checkbox"> Vitamin B12</label> &ensp;
+
+            <label><input id="chol" type="checkbox"> Cholesterol</label> &ensp;
+
+            <label><input id="blsugar" type="checkbox"> Blood Sugar</label> &ensp;
+
+            <label><input id="iron" type="checkbox"> Iron</label> <br>
+                
+
+            <button class="btn btn-small" id="VisualizeExams" type="button" onclick ="createChart(); seeTreatments(1,'treatments');" 
+                    style="background-color: #0d8386; color:white; position:absolute; right:1%; top:12%;">Create chart</button>
+
+        </div>
+    </div>
+
+    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+</div>
+
+<div class ="row  mb-3 mt-3">
+
+    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+
+    <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">  
+        <div id = "bloodtests"  style="margin-top:1%;margin-bottom: 1%;"></div>
+        <div id = "treatments"  style="margin-top:1%;margin-bottom: 1%;"></div>
+    </div>
+
+    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+
+</div>
